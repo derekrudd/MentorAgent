@@ -42,7 +42,7 @@ export default function LoginPage() {
           <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
             <GraduationCap className="h-6 w-6 text-primary" />
           </div>
-          <CardTitle className="text-xl">MentorAgent</CardTitle>
+          <CardTitle className="text-xl">DePaul Mentor Center</CardTitle>
           <CardDescription>University Business Department</CardDescription>
         </CardHeader>
         <CardContent>

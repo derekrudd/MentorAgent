@@ -26,7 +26,7 @@ export function Header({ user }: HeaderProps) {
     <header className="flex h-14 shrink-0 items-center border-b border-border bg-card px-4 md:px-6">
       <Link href="/dashboard" className="flex items-center gap-2 text-foreground">
         <GraduationCap className="h-5 w-5 text-primary" />
-        <span className="text-base font-semibold tracking-tight">MentorAgent</span>
+        <span className="text-base font-semibold tracking-tight">DePaul Mentor Center</span>
       </Link>
 
       <nav className="ml-6 flex items-center gap-4">

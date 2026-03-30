@@ -37,7 +37,7 @@ function getInitials(name: string): string {
 
 const MENTOR_IMAGES: Record<string, string> = {
   Jordan: "/mentors/jordan.png",
-  Sage: "/mentors/sage.png",
+  Kathia: "/mentors/kathia.png",
   Quinn: "/mentors/quinn.png",
 };
 

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MentorAgent",
+  title: "DePaul Mentor Center",
   description: "University Business Department AI Mentoring",
 };
 

@@ -173,11 +173,11 @@ export function ChatPage({ mentor }: ChatPageProps) {
       <div className="flex h-12 shrink-0 items-center gap-3 border-b border-border bg-card px-3">
         {/* Mobile sidebar trigger */}
         <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
-          <SheetTrigger>
-            <Button variant="ghost" size="icon-sm" className="md:hidden">
-              <PanelLeft className="h-4 w-4" />
-              <span className="sr-only">Open conversations</span>
-            </Button>
+          <SheetTrigger
+            render={<Button variant="ghost" size="icon-sm" className="md:hidden" />}
+          >
+            <PanelLeft className="h-4 w-4" />
+            <span className="sr-only">Open conversations</span>
           </SheetTrigger>
           <SheetContent side="left" className="w-72 p-0">
             <SheetTitle className="sr-only">Conversations</SheetTitle>

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-MentorAgent is a university business department AI mentoring platform. Students log in and chat with 3 AI mentor employees (Jordan/Business, Sage/Marketing, Quinn/Development). Each mentor has a unique personality, skills, and can search the web via SerpAPI.
+DePaul Mentor Center is a university business department AI mentoring platform. Students log in and chat with 3 AI mentor employees (Jordan/Business, Kathia/Marketing, Quinn/Development). Each mentor has a unique personality, skills, and can search the web via SerpAPI.
 
 ## Tech Stack
 

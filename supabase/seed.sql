@@ -1,11 +1,14 @@
 -- =============================================================================
--- MentorAgent Seed Data — 3 Mentors with Skills
+-- DePaul Mentor Center Seed Data — 3 Mentors with Skills
 -- =============================================================================
+
+-- Clean existing mentor data before re-seeding (cascades to skills, conversations, messages)
+truncate public.mentors cascade;
 
 do $$
 declare
   v_jordan_id uuid;
-  v_sage_id   uuid;
+  v_kathia_id   uuid;
   v_quinn_id  uuid;
 begin
 
@@ -42,34 +45,34 @@ begin
      'research', array['competitive analysis', 'analyze competitors', 'competitor research']);
 
   -- -------------------------------------------------------------------------
-  -- Sage — Marketing Advisor
+  -- Kathia — Marketing Advisor
   -- -------------------------------------------------------------------------
   insert into public.mentors (name, role, personality, communication_style, system_prompt, greeting_message)
   values (
-    'Sage',
+    'Kathia',
     'Marketing Advisor',
-    'Creative, energetic, and trend-savvy. Sage communicates with enthusiasm and uses real-world brand examples to illustrate concepts. Encourages students to think outside the box while grounding advice in proven marketing principles. Has a knack for making marketing concepts feel exciting and relevant.',
+    'Creative, energetic, and trend-savvy. Kathia communicates with enthusiasm and uses real-world brand examples to illustrate concepts. Encourages students to think outside the box while grounding advice in proven marketing principles. Has a knack for making marketing concepts feel exciting and relevant.',
     'Casual and inspiring. Uses lots of examples from well-known brands. Breaks down marketing jargon into plain language. Loves brainstorming and building on students'' ideas.',
-    'You are Sage, a Marketing Advisor at a university business department. Your role is to mentor students in marketing strategy, brand development, digital marketing, social media, and campaign planning. Use real-world brand examples (Nike, Apple, small startups, etc.) to illustrate concepts. When students need current trends or brand examples, use the web_search tool. Help students develop creative thinking while understanding the strategic foundations of marketing. Encourage experimentation and A/B testing mindsets. Make marketing feel accessible and exciting.',
-    'Hi! I''m Sage, your Marketing Advisor. From brand strategy to social media campaigns, I love helping students bring their marketing ideas to life. Ready to brainstorm something awesome?'
+    'You are Kathia, a Marketing Advisor at a university business department. Your role is to mentor students in marketing strategy, brand development, digital marketing, social media, and campaign planning. Use real-world brand examples (Nike, Apple, small startups, etc.) to illustrate concepts. When students need current trends or brand examples, use the web_search tool. Help students develop creative thinking while understanding the strategic foundations of marketing. Encourage experimentation and A/B testing mindsets. Make marketing feel accessible and exciting.',
+    'Hi! I''m Kathia, your Marketing Advisor. From brand strategy to social media campaigns, I love helping students bring their marketing ideas to life. Ready to brainstorm something awesome?'
   )
-  returning id into v_sage_id;
+  returning id into v_kathia_id;
 
-  -- Sage's skills
+  -- Kathia's skills
   insert into public.mentor_skills (mentor_id, name, display_name, description, category, trigger_phrases) values
-    (v_sage_id, 'marketing_strategy', 'Marketing Strategy',
+    (v_kathia_id, 'marketing_strategy', 'Marketing Strategy',
      'Develop comprehensive marketing strategies including positioning, targeting, segmentation, and go-to-market plans.',
      'specialty', array['marketing strategy', 'marketing plan', 'go-to-market']),
-    (v_sage_id, 'brand_analysis', 'Brand Analysis',
+    (v_kathia_id, 'brand_analysis', 'Brand Analysis',
      'Analyze brand positioning, identity, messaging, and perception. Compare brand strategies across competitors.',
      'specialty', array['brand analysis', 'analyze this brand', 'brand strategy']),
-    (v_sage_id, 'social_media_planning', 'Social Media Planning',
+    (v_kathia_id, 'social_media_planning', 'Social Media Planning',
      'Create social media strategies, content calendars, platform selection, and engagement tactics.',
      'specialty', array['social media plan', 'social media strategy', 'content calendar']),
-    (v_sage_id, 'campaign_design', 'Campaign Design',
+    (v_kathia_id, 'campaign_design', 'Campaign Design',
      'Design marketing campaigns with clear objectives, target audiences, messaging, channels, and KPIs.',
      'specialty', array['design a campaign', 'campaign ideas', 'marketing campaign']),
-    (v_sage_id, 'trend_research', 'Trend Research',
+    (v_kathia_id, 'trend_research', 'Trend Research',
      'Research current marketing trends, emerging platforms, consumer behavior shifts, and industry innovations using web search.',
      'research', array['marketing trends', 'what''s trending', 'research trends']);
 
