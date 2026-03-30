@@ -48,7 +48,7 @@ export default function LoginPage() {
         <CardContent>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="email" className="text-sm font-medium text-foreground">
+              <label htmlFor="email" className="text-base font-medium text-foreground">
                 Email
               </label>
               <Input
@@ -62,7 +62,7 @@ export default function LoginPage() {
               />
             </div>
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="password" className="text-sm font-medium text-foreground">
+              <label htmlFor="password" className="text-base font-medium text-foreground">
                 Password
               </label>
               <Input
@@ -86,7 +86,7 @@ export default function LoginPage() {
               )}
             </Button>
           </form>
-          <p className="mt-4 text-center text-sm text-muted-foreground">
+          <p className="mt-4 text-center text-base text-muted-foreground">
             Don&apos;t have an account?{" "}
             <Link href="/signup" className="text-primary underline-offset-4 hover:underline">
               Sign up

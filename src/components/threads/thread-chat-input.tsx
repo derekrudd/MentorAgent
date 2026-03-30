@@ -167,13 +167,13 @@ export function ThreadChatInput({
         {showMentions && filteredMentors.length > 0 && (
           <div
             ref={popoverRef}
-            className="absolute bottom-full left-0 z-10 mb-1 w-48 overflow-hidden rounded-lg border border-border bg-popover shadow-lg"
+            className="absolute bottom-full left-0 z-10 mb-1 w-44 overflow-hidden sm:w-48 rounded-lg border border-border bg-popover shadow-lg"
           >
             {filteredMentors.map((name, i) => (
               <button
                 key={name}
                 type="button"
-                className={`flex w-full items-center gap-2 px-3 py-2 text-left text-sm transition-colors ${
+                className={`flex w-full items-center gap-2 px-3 py-2 text-left text-base transition-colors ${
                   i === selectedMentionIndex
                     ? "bg-accent text-accent-foreground"
                     : "text-foreground hover:bg-accent/50"
@@ -194,7 +194,7 @@ export function ThreadChatInput({
         <div className="flex items-end gap-2">
           <textarea
             ref={textareaRef}
-            className="min-h-[40px] max-h-[200px] flex-1 resize-none rounded-lg border border-input bg-transparent px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+            className="min-h-[44px] max-h-[200px] flex-1 resize-none rounded-lg border border-input bg-transparent px-3 py-2 text-base text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
             placeholder={placeholder}
             disabled={disabled}
             onInput={handleInput}
@@ -212,10 +212,11 @@ export function ThreadChatInput({
             ) : (
               <SendHorizontal className="h-4 w-4" />
             )}
+            <span className="sr-only">Send message</span>
           </Button>
         </div>
       </div>
-      <p className="mt-1.5 text-[11px] text-muted-foreground/60">
+      <p className="mt-1.5 text-xs text-muted-foreground">
         Tip: Use @name to direct your message to a specific mentor
       </p>
     </div>

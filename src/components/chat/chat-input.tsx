@@ -59,7 +59,7 @@ export function ChatInput({
       <div className="flex items-end gap-2">
         <textarea
           ref={textareaRef}
-          className="min-h-[40px] max-h-[200px] flex-1 resize-none rounded-lg border border-input bg-transparent px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+          className="min-h-[44px] max-h-[200px] flex-1 resize-none rounded-lg border border-input bg-transparent px-3 py-2 text-base text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
           placeholder={placeholder}
           disabled={disabled}
           onInput={adjustHeight}
@@ -77,6 +77,7 @@ export function ChatInput({
           ) : (
             <SendHorizontal className="h-4 w-4" />
           )}
+          <span className="sr-only">Send message</span>
         </Button>
       </div>
     </div>

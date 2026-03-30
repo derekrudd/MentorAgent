@@ -16,12 +16,12 @@ import { Button } from "@/components/ui/button";
 import { Loader2, Users } from "lucide-react";
 
 const GRADIENT_COLORS = [
-  "from-violet-600/80 to-indigo-900/90",
-  "from-emerald-600/80 to-teal-900/90",
-  "from-amber-600/80 to-orange-900/90",
-  "from-rose-600/80 to-pink-900/90",
-  "from-cyan-600/80 to-blue-900/90",
-  "from-fuchsia-600/80 to-purple-900/90",
+  "from-violet-500 to-indigo-600",
+  "from-emerald-500 to-teal-600",
+  "from-amber-500 to-orange-600",
+  "from-rose-500 to-pink-600",
+  "from-cyan-500 to-blue-600",
+  "from-fuchsia-500 to-purple-600",
 ];
 
 function getInitials(name: string): string {
@@ -92,7 +92,7 @@ export function CreateThreadDialog({
 
         <div className="space-y-4">
           <div>
-            <label className="mb-1.5 block text-xs font-medium text-muted-foreground">
+            <label className="mb-1.5 block text-sm font-medium text-muted-foreground">
               Thread title (optional)
             </label>
             <Input
@@ -103,7 +103,7 @@ export function CreateThreadDialog({
           </div>
 
           <div>
-            <label className="mb-1.5 block text-xs font-medium text-muted-foreground">
+            <label className="mb-1.5 block text-sm font-medium text-muted-foreground">
               Select mentors ({selectedIds.length}/3)
             </label>
             {mentorsLoading ? (
@@ -111,7 +111,7 @@ export function CreateThreadDialog({
                 <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
               </div>
             ) : (
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                 {mentors?.map((mentor, i) => {
                   const isSelected = selectedIds.includes(mentor.id);
                   const gradient = GRADIENT_COLORS[i % GRADIENT_COLORS.length];
@@ -135,10 +135,10 @@ export function CreateThreadDialog({
                         </span>
                       </div>
                       <div className="min-w-0">
-                        <p className="truncate text-xs font-medium text-foreground">
+                        <p className="truncate text-sm font-medium text-foreground">
                           {mentor.name}
                         </p>
-                        <p className="truncate text-[10px] text-muted-foreground">
+                        <p className="truncate text-xs text-muted-foreground">
                           {mentor.role}
                         </p>
                       </div>

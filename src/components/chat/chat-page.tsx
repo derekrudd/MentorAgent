@@ -176,6 +176,7 @@ export function ChatPage({ mentor }: ChatPageProps) {
           <SheetTrigger>
             <Button variant="ghost" size="icon-sm" className="md:hidden">
               <PanelLeft className="h-4 w-4" />
+              <span className="sr-only">Open conversations</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="w-72 p-0">
@@ -192,20 +193,20 @@ export function ChatPage({ mentor }: ChatPageProps) {
         </Link>
 
         <Avatar size="sm">
-          <AvatarFallback className="bg-primary/10 text-[10px] text-primary">
+          <AvatarFallback className="bg-primary/10 text-xs text-primary">
             {getInitials(mentor.name)}
           </AvatarFallback>
         </Avatar>
         <div className="min-w-0">
-          <p className="truncate text-sm font-medium text-foreground">{mentor.name}</p>
-          <p className="truncate text-xs text-muted-foreground">{mentor.role}</p>
+          <p className="truncate text-base font-medium text-foreground">{mentor.name}</p>
+          <p className="truncate text-sm text-muted-foreground">{mentor.role}</p>
         </div>
       </div>
 
       {/* Main area */}
       <div className="flex flex-1 overflow-hidden">
         {/* Desktop sidebar */}
-        <div className="hidden w-72 shrink-0 border-r border-border bg-card md:block">
+        <div className="hidden w-60 shrink-0 border-r border-border bg-card md:block lg:w-72">
           {sidebar}
         </div>
 

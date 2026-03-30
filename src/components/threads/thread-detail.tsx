@@ -22,12 +22,12 @@ function getInitials(name: string): string {
 }
 
 const MENTOR_COLOR_PALETTE = [
-  "bg-violet-600/20 text-violet-300",
-  "bg-emerald-600/20 text-emerald-300",
-  "bg-amber-600/20 text-amber-300",
-  "bg-rose-600/20 text-rose-300",
-  "bg-cyan-600/20 text-cyan-300",
-  "bg-fuchsia-600/20 text-fuchsia-300",
+  "bg-violet-100 text-violet-700",
+  "bg-emerald-100 text-emerald-700",
+  "bg-amber-100 text-amber-700",
+  "bg-rose-100 text-rose-700",
+  "bg-cyan-100 text-cyan-700",
+  "bg-fuchsia-100 text-fuchsia-700",
 ];
 
 interface ThreadDetailProps {
@@ -140,7 +140,7 @@ export function ThreadDetail({ thread: initialThread }: ThreadDetailProps) {
                 style={{ zIndex: 3 - i }}
               >
                 <AvatarFallback
-                  className={`text-[9px] ${MENTOR_COLOR_PALETTE[i % MENTOR_COLOR_PALETTE.length]}`}
+                  className={`text-xs ${MENTOR_COLOR_PALETTE[i % MENTOR_COLOR_PALETTE.length]}`}
                 >
                   {getInitials(p.mentor?.name ?? "M")}
                 </AvatarFallback>
@@ -149,9 +149,9 @@ export function ThreadDetail({ thread: initialThread }: ThreadDetailProps) {
           </div>
 
           <div className="min-w-0">
-            <p className="truncate text-sm font-medium text-foreground">
+            <h2 className="truncate text-base font-medium text-foreground">
               {initialThread.title}
-            </p>
+            </h2>
           </div>
         </div>
 
@@ -169,6 +169,7 @@ export function ThreadDetail({ thread: initialThread }: ThreadDetailProps) {
           className="shrink-0 text-muted-foreground hover:text-destructive"
         >
           <Trash2 className="h-3.5 w-3.5" />
+          <span className="sr-only">Delete thread</span>
         </Button>
       </div>
 
@@ -206,7 +207,7 @@ export function ThreadDetail({ thread: initialThread }: ThreadDetailProps) {
         {/* Mentors responding indicator */}
         {(mentorsGenerating || isMentorsResponding) && !showTriggerButton && (
           <div className="flex justify-center border-t border-border/50 bg-card/50 px-4 py-2">
-            <p className="flex items-center gap-2 text-xs text-muted-foreground">
+            <p className="flex items-center gap-2 text-sm text-muted-foreground">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
               Mentors are responding...
             </p>
@@ -244,17 +245,17 @@ function EmptyState({
               </AvatarFallback>
             </Avatar>
             <div>
-              <p className="text-sm font-medium text-foreground">
+              <p className="text-base font-medium text-foreground">
                 {p.mentor?.name}
               </p>
-              <p className="text-xs text-muted-foreground">{p.mentor?.role}</p>
+              <p className="text-sm text-muted-foreground">{p.mentor?.role}</p>
             </div>
           </div>
         ))}
       </div>
       <div className="flex items-center gap-2 text-muted-foreground">
         <Users className="h-4 w-4" />
-        <p className="text-sm">Start a collaborative conversation</p>
+        <p className="text-base">Start a collaborative conversation</p>
       </div>
     </div>
   );

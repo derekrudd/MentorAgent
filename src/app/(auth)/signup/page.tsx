@@ -78,7 +78,7 @@ export default function SignupPage() {
         <CardContent>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="fullName" className="text-sm font-medium text-foreground">
+              <label htmlFor="fullName" className="text-base font-medium text-foreground">
                 Full Name
               </label>
               <Input
@@ -92,7 +92,7 @@ export default function SignupPage() {
               />
             </div>
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="email" className="text-sm font-medium text-foreground">
+              <label htmlFor="email" className="text-base font-medium text-foreground">
                 Email
               </label>
               <Input
@@ -106,7 +106,7 @@ export default function SignupPage() {
               />
             </div>
             <div className="flex flex-col gap-1.5">
-              <label htmlFor="password" className="text-sm font-medium text-foreground">
+              <label htmlFor="password" className="text-base font-medium text-foreground">
                 Password
               </label>
               <Input
@@ -131,7 +131,7 @@ export default function SignupPage() {
               )}
             </Button>
           </form>
-          <p className="mt-4 text-center text-sm text-muted-foreground">
+          <p className="mt-4 text-center text-base text-muted-foreground">
             Already have an account?{" "}
             <Link href="/login" className="text-primary underline-offset-4 hover:underline">
               Sign in

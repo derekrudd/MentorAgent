@@ -28,7 +28,7 @@ export default async function AppLayout({
   return (
     <div className="flex h-screen flex-col">
       <Header user={headerUser} />
-      <main className="flex-1 overflow-hidden">{children}</main>
+      <main className="min-h-0 flex-1 overflow-y-auto">{children}</main>
     </div>
   );
 }

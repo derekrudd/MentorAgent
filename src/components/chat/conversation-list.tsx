@@ -81,7 +81,7 @@ export function ConversationList({
             return (
               <div
                 key={conv.id}
-                className={`group flex items-center gap-1 rounded-lg px-2 py-1.5 text-sm transition-colors ${
+                className={`group flex items-center gap-1 rounded-lg px-2 py-1.5 text-base transition-colors ${
                   isActive
                     ? "bg-accent text-accent-foreground"
                     : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
@@ -96,11 +96,11 @@ export function ConversationList({
                     onChange={(e) => setEditValue(e.target.value)}
                     onBlur={commitRename}
                     onKeyDown={handleKeyDown}
-                    className="h-6 flex-1 border-0 bg-transparent px-1 py-0 text-sm focus-visible:ring-0"
+                    className="h-6 flex-1 border-0 bg-transparent px-1 py-0 text-base focus-visible:ring-0"
                   />
                 ) : (
                   <button
-                    className="flex-1 truncate text-left"
+                    className="flex-1 truncate text-left focus-visible:bg-accent focus-visible:text-accent-foreground focus-visible:outline-none"
                     onClick={() => onSelect(conv.id)}
                     onDoubleClick={() => startEditing(conv)}
                     title={conv.title}
@@ -109,7 +109,7 @@ export function ConversationList({
                   </button>
                 )}
 
-                <span className="hidden shrink-0 text-[10px] text-muted-foreground/60 group-hover:hidden sm:inline">
+                <span className="hidden shrink-0 text-xs text-muted-foreground group-hover:hidden sm:inline">
                   {formatDistanceToNow(new Date(conv.updated_at), {
                     addSuffix: false,
                   })}
@@ -118,20 +118,21 @@ export function ConversationList({
                 <Button
                   variant="ghost"
                   size="icon-xs"
-                  className="hidden shrink-0 opacity-0 transition-opacity group-hover:inline-flex group-hover:opacity-100"
+                  className="shrink-0 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100 focus-visible:opacity-100"
                   onClick={(e) => {
                     e.stopPropagation();
                     onDelete(conv.id);
                   }}
                 >
                   <Trash2 className="h-3 w-3 text-destructive" />
+                  <span className="sr-only">Delete conversation</span>
                 </Button>
               </div>
             );
           })}
 
           {conversations.length === 0 && (
-            <p className="px-2 py-4 text-center text-xs text-muted-foreground">
+            <p className="px-2 py-4 text-center text-sm text-muted-foreground">
               No conversations yet
             </p>
           )}

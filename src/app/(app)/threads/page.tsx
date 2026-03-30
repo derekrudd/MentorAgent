@@ -18,13 +18,13 @@ export default function ThreadsPage() {
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
+    <div className="mx-auto max-w-7xl px-4 py-6 md:px-6 md:py-8">
       <div className="mb-8 flex items-start justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-foreground">
+          <h1 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">
             MentorThreads
           </h1>
-          <p className="mt-1 text-sm text-muted-foreground">
+          <p className="mt-1 text-base text-muted-foreground">
             Collaborate with multiple mentors in one conversation
           </p>
         </div>
@@ -38,7 +38,7 @@ export default function ThreadsPage() {
         <div className="flex items-center justify-center py-16">
           <div className="flex flex-col items-center gap-3">
             <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
-            <p className="text-sm text-muted-foreground">Loading threads...</p>
+            <p className="text-base text-muted-foreground">Loading threads...</p>
           </div>
         </div>
       ) : threads.length === 0 ? (
@@ -50,7 +50,7 @@ export default function ThreadsPage() {
             <h2 className="text-base font-semibold text-foreground">
               No threads yet
             </h2>
-            <p className="mt-1 max-w-sm text-sm text-muted-foreground">
+            <p className="mt-1 max-w-sm text-base text-muted-foreground">
               Start a collaborative conversation with 2-3 mentors to get
               multi-perspective guidance.
             </p>
