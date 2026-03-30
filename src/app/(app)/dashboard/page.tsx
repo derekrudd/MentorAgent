@@ -5,9 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMentors } from "@/lib/hooks/use-mentors";
 import { useGsapStagger, useGsapIconHover } from "@/lib/animations/use-gsap";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import { MessageSquare, ArrowUpRight, Users } from "lucide-react";
 import type { Mentor } from "@/types/database";
 
@@ -38,7 +36,6 @@ function getInitials(name: string): string {
 const MENTOR_IMAGES: Record<string, string> = {
   Jordan: "/mentors/jordan.png",
   Kathia: "/mentors/kathia.png",
-  Quinn: "/mentors/quinn.png",
 };
 
 const GRADIENT_COLORS = [
@@ -62,7 +59,7 @@ function MentorCard({ mentor, index }: { mentor: Mentor; index: number }) {
             src={mentorImage}
             alt={mentor.name}
             fill
-            className="object-cover object-top"
+            className="object-contain"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
@@ -86,27 +83,9 @@ function MentorCard({ mentor, index }: { mentor: Mentor; index: number }) {
         <p className="mt-2 mb-6 text-base text-muted-foreground">
           {mentor.personality}
         </p>
-
-        {mentor.skills && mentor.skills.length > 0 && (
-          <div className="flex flex-wrap gap-1.5">
-            {mentor.skills.map((skill) => (
-              <Badge
-                key={skill.id}
-                variant="secondary"
-                className="h-auto rounded bg-primary/8 px-2 py-2 text-sm"
-              >
-                {skill.display_name}
-              </Badge>
-            ))}
-          </div>
-        )}
       </div>
 
-      <div className="flex items-center justify-between border-t border-border px-4 py-3">
-        <span className="text-sm text-muted-foreground">
-          {mentor.skills?.length ?? 0} skill
-          {(mentor.skills?.length ?? 0) !== 1 ? "s" : ""}
-        </span>
+      <div className="flex items-center justify-end border-t border-border px-4 py-3">
         <MentorCardChatButton mentorId={mentor.id} />
       </div>
     </div>
@@ -115,7 +94,7 @@ function MentorCard({ mentor, index }: { mentor: Mentor; index: number }) {
 
 function LoadingSkeleton() {
   return (
-    <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+    <div className="grid gap-6 sm:grid-cols-2">
       {[0, 1, 2].map((i) => (
         <div
           key={i}
@@ -161,7 +140,7 @@ export default function DashboardPage() {
       ) : (
         <div
           ref={gridRef}
-          className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3"
+          className="grid gap-6 sm:grid-cols-2"
         >
           {mentors?.map((mentor, i) => (
             <MentorCard key={mentor.id} mentor={mentor} index={i} />

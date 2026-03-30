@@ -6,23 +6,16 @@ test.describe("Dashboard", () => {
     await login(page);
   });
 
-  test("displays 3 mentor cards", async ({ page }) => {
+  test("displays 2 mentor cards", async ({ page }) => {
     await expect(page.getByText("Your AI Mentors")).toBeVisible();
     await expect(page.getByRole("heading", { name: "Jordan" })).toBeVisible({ timeout: 10_000 });
     await expect(page.getByRole("heading", { name: "Kathia" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Quinn" })).toBeVisible();
   });
 
   test("mentor cards show role and personality", async ({ page }) => {
     await expect(page.getByRole("heading", { name: "Jordan" })).toBeVisible({ timeout: 10_000 });
     await expect(page.getByText("Business Advisor")).toBeVisible();
     await expect(page.getByText("Marketing Advisor")).toBeVisible();
-    await expect(page.getByText("Development Advisor")).toBeVisible();
-  });
-
-  test("mentor cards show skill badges", async ({ page }) => {
-    await expect(page.getByRole("heading", { name: "Jordan" })).toBeVisible({ timeout: 10_000 });
-    await expect(page.getByText("Business Plan Review").first()).toBeVisible();
   });
 
   test("Chat button navigates to mentor chat", async ({ page }) => {

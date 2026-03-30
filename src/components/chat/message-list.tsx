@@ -4,13 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import type { Mentor, Message } from "@/types/database";
 
 const MENTOR_IMAGES: Record<string, string> = {
   Jordan: "/mentors/jordan.png",
   Kathia: "/mentors/kathia.png",
-  Quinn: "/mentors/quinn.png",
 };
 
 interface MessageListProps {
@@ -90,20 +88,6 @@ function EmptyState({
       <p className="max-w-md text-base text-muted-foreground">
         {mentor.greeting_message || `Hi! I'm ${mentor.name}. How can I help you today?`}
       </p>
-      {mentor.skills && mentor.skills.length > 0 && (
-        <div className="flex flex-wrap justify-center gap-1.5">
-          {mentor.skills.map((skill) => (
-            <Badge
-              key={skill.id}
-              variant="secondary"
-              className="h-auto cursor-pointer rounded bg-primary/8 p-2 text-sm transition-colors hover:bg-primary/15"
-              onClick={() => onSkillClick?.(skill.display_name)}
-            >
-              {skill.display_name}
-            </Badge>
-          ))}
-        </div>
-      )}
     </div>
   );
 }

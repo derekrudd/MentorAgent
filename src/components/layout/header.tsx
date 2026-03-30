@@ -42,6 +42,12 @@ export function Header({ user }: HeaderProps) {
         >
           Threads
         </Link>
+        <Link
+          href="/admin"
+          className="text-base text-muted-foreground transition-colors hover:text-foreground"
+        >
+          Engagement
+        </Link>
       </nav>
 
       <div className="ml-auto flex items-center gap-3">

@@ -26,7 +26,7 @@ test.describe("MentorThreads", () => {
 
     // Select mentors by clicking on their names in the dialog
     const dialog = page.locator("[role='dialog']");
-    const mentorButtons = dialog.locator("button, [role='button']").filter({ hasText: /Jordan|Kathia|Quinn/ });
+    const mentorButtons = dialog.locator("button, [role='button']").filter({ hasText: /Jordan|Kathia/ });
     const count = await mentorButtons.count();
     if (count >= 2) {
       await mentorButtons.nth(0).click();
@@ -47,7 +47,7 @@ test.describe("MentorThreads", () => {
     await page.waitForTimeout(2000);
 
     const dialog = page.locator("[role='dialog']");
-    const mentorButtons = dialog.locator("button, [role='button']").filter({ hasText: /Jordan|Kathia|Quinn/ });
+    const mentorButtons = dialog.locator("button, [role='button']").filter({ hasText: /Jordan|Kathia/ });
     if ((await mentorButtons.count()) >= 2) {
       await mentorButtons.nth(0).click();
       await mentorButtons.nth(1).click();
@@ -74,7 +74,7 @@ test.describe("MentorThreads", () => {
       await page.getByRole("button", { name: /new thread/i }).click();
       await page.waitForTimeout(2000);
       const dialog = page.locator("[role='dialog']");
-      const mentorButtons = dialog.locator("button, [role='button']").filter({ hasText: /Jordan|Kathia|Quinn/ });
+      const mentorButtons = dialog.locator("button, [role='button']").filter({ hasText: /Jordan|Kathia/ });
       if ((await mentorButtons.count()) >= 2) {
         await mentorButtons.nth(0).click();
         await mentorButtons.nth(1).click();
