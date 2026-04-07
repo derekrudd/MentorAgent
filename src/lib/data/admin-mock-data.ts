@@ -99,7 +99,7 @@ export const MENTOR_USAGE: MentorUsageStat[] = [
   },
   {
     mentorName: "Kathia",
-    mentorRole: "Mentor Program Manager",
+    mentorRole: "Mentor Manager",
     mentorImage: "/mentors/kathia.png",
     conversations: 289,
     messages: 4156,

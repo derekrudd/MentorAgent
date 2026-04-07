@@ -344,9 +344,10 @@ export async function triggerMentorResponses(
   // Fire-and-forget: trigger sequential LLM processing
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3001");
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
+    process.env.URL || // Netlify
+    process.env.DEPLOY_PRIME_URL || // Netlify deploy preview
+    "http://localhost:3001";
 
   const cookieStore = await cookies();
   const cookieHeader = cookieStore
