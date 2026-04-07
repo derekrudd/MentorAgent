@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
 import {
   createThreadSchema,
@@ -342,12 +342,20 @@ export async function triggerMentorResponses(
   }
 
   // Fire-and-forget: trigger sequential LLM processing
+  // Derive base URL from the incoming request so it works regardless of
+  // host/port (local dev, Netlify, Vercel, previews, etc.)
+  const hdrs = await headers();
+  const host = hdrs.get("x-forwarded-host") ?? hdrs.get("host");
+  const proto =
+    hdrs.get("x-forwarded-proto") ??
+    (host?.startsWith("localhost") ? "http" : "https");
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL ||
+    (host ? `${proto}://${host}` : null) ||
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
-    process.env.URL || // Netlify
-    process.env.DEPLOY_PRIME_URL || // Netlify deploy preview
-    "http://localhost:3001";
+    process.env.URL ||
+    process.env.DEPLOY_PRIME_URL ||
+    "http://localhost:3000";
 
   const cookieStore = await cookies();
   const cookieHeader = cookieStore
