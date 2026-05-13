@@ -8,7 +8,7 @@ import type { Mentor, Message } from "@/types/database";
 
 const MENTOR_IMAGES: Record<string, string> = {
   Jordan: "/mentors/jordan.png",
-  Kathia: "/mentors/kathia.png",
+  Tiana: "/mentors/tiana.png",
 };
 
 interface MessageListProps {

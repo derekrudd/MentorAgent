@@ -4,7 +4,6 @@ import {
   MessagesSquare,
   Users,
   Clock,
-  GitBranch,
   Timer,
 } from "lucide-react";
 
@@ -55,13 +54,6 @@ export const OVERVIEW_STATS: OverviewStat[] = [
     icon: Clock,
   },
   {
-    label: "Thread Discussions",
-    value: 89,
-    change: 22.1,
-    changeLabel: "vs last month",
-    icon: GitBranch,
-  },
-  {
     label: "Avg Session Length",
     value: 14,
     suffix: " min",
@@ -98,9 +90,9 @@ export const MENTOR_USAGE: MentorUsageStat[] = [
     percentOfTotal: 55,
   },
   {
-    mentorName: "Kathia",
+    mentorName: "Tiana",
     mentorRole: "Mentor Manager",
-    mentorImage: "/mentors/kathia.png",
+    mentorImage: "/mentors/tiana.png",
     conversations: 289,
     messages: 4156,
     uniqueStudents: 87,
@@ -146,7 +138,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
     avatarInitials: "JC",
     totalConversations: 19,
     totalMessages: 156,
-    favoriteMentor: "Kathia",
+    favoriteMentor: "Tiana",
     lastActive: new Date(Date.now() - 1000 * 60 * 45).toISOString(),
     engagementLevel: "high",
   },
@@ -179,7 +171,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
     avatarInitials: "SR",
     totalConversations: 12,
     totalMessages: 89,
-    favoriteMentor: "Kathia",
+    favoriteMentor: "Tiana",
     lastActive: new Date(Date.now() - 1000 * 60 * 60 * 8).toISOString(),
     engagementLevel: "medium",
   },
@@ -190,7 +182,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
     avatarInitials: "TB",
     totalConversations: 11,
     totalMessages: 76,
-    favoriteMentor: "Kathia",
+    favoriteMentor: "Tiana",
     lastActive: new Date(Date.now() - 1000 * 60 * 60 * 12).toISOString(),
     engagementLevel: "medium",
   },
@@ -212,7 +204,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
     avatarInitials: "MT",
     totalConversations: 5,
     totalMessages: 31,
-    favoriteMentor: "Kathia",
+    favoriteMentor: "Tiana",
     lastActive: new Date(Date.now() - 1000 * 60 * 60 * 36).toISOString(),
     engagementLevel: "low",
   },
@@ -285,14 +277,6 @@ export const ENGAGEMENT_TIPS: EngagementTip[] = [
   },
   {
     id: "2",
-    title: "Promote MentorThreads for Group Projects",
-    description:
-      "Thread usage is up 22% but only 34% of students have tried it. Encourage teams to use multi-mentor threads for cross-functional project feedback.",
-    category: "breadth",
-    impact: "high",
-  },
-  {
-    id: "3",
     title: "Highlight Skill Badges as Conversation Starters",
     description:
       "Students who click skill badges before typing send 40% more messages per session. Surface skill suggestions more prominently in the empty state.",
@@ -300,7 +284,7 @@ export const ENGAGEMENT_TIPS: EngagementTip[] = [
     impact: "medium",
   },
   {
-    id: "4",
+    id: "3",
     title: "Send Weekly Engagement Digests",
     description:
       "A short email showing students their activity summary and suggesting a follow-up topic can re-engage 25% of inactive users within 48 hours.",
@@ -308,7 +292,7 @@ export const ENGAGEMENT_TIPS: EngagementTip[] = [
     impact: "high",
   },
   {
-    id: "5",
+    id: "4",
     title: "Create Domain-Specific Prompt Templates",
     description:
       "Students often don't know what to ask. Providing starter prompts like 'Review my business plan' or 'Help me prep for an interview' reduces blank-page anxiety.",
@@ -316,7 +300,7 @@ export const ENGAGEMENT_TIPS: EngagementTip[] = [
     impact: "medium",
   },
   {
-    id: "6",
+    id: "5",
     title: "Encourage Cross-Mentor Exploration",
     description:
       "58% of students only use one mentor. Prompt them to try a different advisor after 5 conversations — varied perspectives improve learning outcomes.",

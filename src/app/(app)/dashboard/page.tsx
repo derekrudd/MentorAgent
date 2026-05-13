@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useMentors } from "@/lib/hooks/use-mentors";
 import { useGsapStagger, useGsapIconHover } from "@/lib/animations/use-gsap";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, ArrowUpRight, Users } from "lucide-react";
+import { MessageSquare, ArrowUpRight } from "lucide-react";
 import type { Mentor } from "@/types/database";
 
 function MentorCardChatButton({ mentorId }: { mentorId: string }) {
@@ -35,7 +35,7 @@ function getInitials(name: string): string {
 
 const MENTOR_IMAGES: Record<string, string> = {
   Jordan: "/mentors/jordan.png",
-  Kathia: "/mentors/kathia.png",
+  Tiana: "/mentors/tiana.png",
 };
 
 const GRADIENT_COLORS = [
@@ -147,29 +147,6 @@ export default function DashboardPage() {
           ))}
         </div>
       )}
-
-      {/* MentorThreads CTA */}
-      <div className="mt-8 flex items-center justify-between gap-6 rounded-xl border border-border bg-card p-6">
-        <div className="flex items-center gap-4">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-            <Users className="h-5 w-5 text-primary" />
-          </div>
-          <div>
-            <h3 className="text-base font-semibold text-foreground">
-              MentorThreads
-            </h3>
-            <p className="text-base text-muted-foreground">
-              Get multi-perspective guidance from 2-3 mentors in one conversation
-            </p>
-          </div>
-        </div>
-        <Link href="/threads">
-          <Button className="gap-1.5 px-4 py-2 text-sm">
-            Start a Thread
-            <ArrowUpRight className="h-3 w-3" />
-          </Button>
-        </Link>
-      </div>
     </div>
   );
 }

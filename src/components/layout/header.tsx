@@ -34,13 +34,7 @@ export function Header({ user }: HeaderProps) {
           href="/dashboard"
           className="text-base text-muted-foreground transition-colors hover:text-foreground"
         >
-          Dashboard
-        </Link>
-        <Link
-          href="/threads"
-          className="text-base text-muted-foreground transition-colors hover:text-foreground"
-        >
-          Threads
+          Mentor Agents
         </Link>
         <Link
           href="/admin"

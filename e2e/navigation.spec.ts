@@ -7,23 +7,17 @@ test.describe("Navigation & Layout", () => {
   });
 
   test("header brand links to dashboard", async ({ page }) => {
-    await page.goto("/threads");
+    await page.goto("/admin");
     await page.waitForTimeout(1000);
-    await page.getByRole("link", { name: /mentoragent/i }).click();
+    await page.getByRole("link", { name: /depaul mentor center/i }).click();
     await expect(page).toHaveURL(/\/dashboard/);
   });
 
-  test("Dashboard nav link works", async ({ page }) => {
-    await page.goto("/threads");
+  test("Mentor Agents nav link works", async ({ page }) => {
+    await page.goto("/admin");
     await page.waitForTimeout(1000);
-    await page.getByRole("link", { name: /dashboard/i }).click();
+    await page.getByRole("link", { name: /mentor agents/i }).click();
     await expect(page).toHaveURL(/\/dashboard/);
-  });
-
-  test("Threads nav link works", async ({ page }) => {
-    await expect(page.getByRole("link", { name: /threads/i })).toBeVisible();
-    await page.getByRole("link", { name: /threads/i }).click();
-    await expect(page).toHaveURL(/\/threads/);
   });
 
   test.skip("logout redirects to login", async ({ page }) => {
