@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-DePaul Mentor Center is a university business department AI mentoring platform. Students log in and chat with 2 AI mentor employees (Jordan/Mentor Therapist, Tiana/Mentor Manager). Each mentor has a unique personality, skills, and can search the web via SerpAPI.
+IU LUDDY Mentor Center is a university business department AI mentoring platform. Students log in and chat with 2 AI mentor employees (Jordan/Mentor Therapist, Tiana/Student Success Agent). Each mentor has a unique personality, skills, and can search the web via SerpAPI.
 
 ## Tech Stack
 

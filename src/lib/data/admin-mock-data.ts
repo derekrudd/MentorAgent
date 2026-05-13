@@ -91,7 +91,7 @@ export const MENTOR_USAGE: MentorUsageStat[] = [
   },
   {
     mentorName: "Tiana",
-    mentorRole: "Mentor Manager",
+    mentorRole: "Student Success Agent",
     mentorImage: "/mentors/tiana.png",
     conversations: 289,
     messages: 4156,
