@@ -53,23 +53,15 @@ function MentorCard({ mentor, index }: { mentor: Mentor; index: number }) {
 
   return (
     <div className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
-      <div className={`relative flex h-48 sm:h-64 md:h-[300px] items-end overflow-hidden ${mentorImage ? "bg-muted" : `bg-gradient-to-b ${gradient}`}`}>
+      <div className={`relative flex h-48 sm:h-64 md:h-[300px] items-end overflow-hidden ${mentorImage ? "bg-zinc-100" : `bg-gradient-to-b ${gradient}`}`}>
         {mentorImage ? (
-          <>
-            <Image
-              src={mentorImage}
-              alt=""
-              aria-hidden
-              fill
-              className="scale-125 object-cover blur-2xl opacity-60"
-            />
-            <Image
-              src={mentorImage}
-              alt={mentor.name}
-              fill
-              className="relative object-contain"
-            />
-          </>
+          <Image
+            src={mentorImage}
+            alt={mentor.name}
+            fill
+            sizes="(min-width: 640px) 50vw, 100vw"
+            className="object-contain"
+          />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="text-6xl font-bold text-white/20">
