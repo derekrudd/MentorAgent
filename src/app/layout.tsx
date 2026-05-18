@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IU LUDDY Mentor Center",
+  title: "FSU Mentor Center",
   description: "University Business Department AI Mentoring",
 };
 

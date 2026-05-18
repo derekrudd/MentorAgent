@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Welcome to the FSU Mentor Center</title>
+<style>
+  /* Email-safe base styles. Most styles are also inlined below for client compatibility. */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d0f12;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  table { border-collapse: collapse; }
+  img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+  a { color: #0d0f12; }
+
+  .wrapper { width: 100%; background-color: #0d0f12; padding: 40px 16px; }
+  .card {
+    width: 100%;
+    max-width: 560px;
+    background-color: #f5f3ee;
+    border-radius: 20px;
+    padding: 48px 40px;
+    margin: 0 auto;
+    color: #0d0f12;
+  }
+  .brand {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    color: #0d0f12;
+    margin-bottom: 32px;
+  }
+  .headline {
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #0d0f12;
+    margin: 0 0 20px 0;
+  }
+  .intro {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #2a2d33;
+    margin: 0 0 28px 0;
+  }
+  .inset {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 24px 24px 28px 24px;
+    margin: 0 0 28px 0;
+  }
+  .label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    text-transform: uppercase;
+    margin: 0 0 6px 0;
+  }
+  .label-value {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #0d0f12;
+    margin: 0 0 18px 0;
+    font-weight: 500;
+  }
+  .label-value:last-of-type { margin-bottom: 24px; }
+  .cta-btn {
+    display: block;
+    background-color: #0d0f12;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    padding: 14px 24px;
+    border-radius: 10px;
+    letter-spacing: -0.01em;
+  }
+  .section-heading {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0d0f12;
+    margin: 0 0 12px 0;
+  }
+  .tips {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #2a2d33;
+    padding-left: 18px;
+    margin: 0 0 24px 0;
+  }
+  .tips li { margin-bottom: 4px; }
+  .secondary {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #2a2d33;
+    margin: 0 0 8px 0;
+  }
+  .secondary a {
+    color: #0d0f12;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #8a8f99;
+    padding: 24px 16px 0 16px;
+  }
+  .footer a {
+    color: #8a8f99;
+    text-decoration: underline;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .card { padding: 32px 24px; border-radius: 16px; }
+    .headline { font-size: 22px; }
+    .wrapper { padding: 24px 8px; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background-color:#0d0f12;">
+
+<table role="presentation" class="wrapper" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0d0f12;padding:40px 16px;">
+  <tr>
+    <td align="center">
+
+      <!-- Card -->
+      <table role="presentation" class="card" width="560" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;width:100%;background-color:#f5f3ee;border-radius:20px;">
+        <tr>
+          <td style="padding:48px 40px;">
+
+            <!-- Brand -->
+            <p class="brand" style="text-align:center;font-weight:700;font-size:18px;letter-spacing:-0.01em;color:#0d0f12;margin:0 0 32px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+              FSU Mentor Center
+            </p>
+
+            <!-- Headline -->
+            <h1 class="headline" style="text-align:center;font-size:26px;line-height:1.25;font-weight:700;letter-spacing:-0.02em;color:#0d0f12;margin:0 0 20px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+              Mentorship, on your schedule.
+            </h1>
+
+            <!-- Intro -->
+            <p class="intro" style="text-align:center;font-size:15px;line-height:1.6;color:#2a2d33;margin:0 0 28px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+              Hi {{first_name}}, welcome to the FSU Mentor Center — a new space built for business students who want to think things through, get unstuck, and grow on their own terms. Your account is ready to activate.
+            </p>
+
+            <!-- Inset card -->
+            <table role="presentation" class="inset" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;border-radius:14px;">
+              <tr>
+                <td style="padding:24px 24px 28px 24px;">
+                  <p class="label" style="font-size:11px;font-weight:600;letter-spacing:0.08em;color:#6b7280;text-transform:uppercase;margin:0 0 6px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+                    What you get
+                  </p>
+                  <p class="label-value" style="font-size:15px;line-height:1.5;color:#0d0f12;margin:0 0 18px 0;font-weight:500;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+                    A team of AI mentors trained to coach, challenge, and support you across the topics that matter most in your business journey.
+                  </p>
+
+                  <p class="label" style="font-size:11px;font-weight:600;letter-spacing:0.08em;color:#6b7280;text-transform:uppercase;margin:0 0 6px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+                    Who it's for
+                  </p>
+                  <p class="label-value" style="font-size:15px;line-height:1.5;color:#0d0f12;margin:0 0 24px 0;font-weight:500;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+                    Every student in the DePaul business department. No appointments, no waitlists — just open the chat when you need it.
+                  </p>
+
+                  <!-- CTA -->
+                  <a href="{{create_account_url}}" class="cta-btn" style="display:block;background-color:#0d0f12;color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;text-align:center;padding:14px 24px;border-radius:10px;letter-spacing:-0.01em;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+                    Create Your Account
+                  </a>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Tips section -->
+            <p class="section-heading" style="font-size:15px;font-weight:600;color:#0d0f12;margin:0 0 12px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+              A few ways students are using it
+            </p>
+            <ul class="tips" style="font-size:14px;line-height:1.7;color:#2a2d33;padding-left:18px;margin:0 0 24px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+              <li style="margin-bottom:4px;">Talking through case prep before class so the ideas land sharper.</li>
+              <li style="margin-bottom:4px;">Practicing tough conversations — pitches, networking intros, tricky group projects.</li>
+              <li style="margin-bottom:4px;">Getting unstuck on assignments when office hours feel far away.</li>
+              <li style="margin-bottom:4px;">Just thinking out loud after a long week.</li>
+            </ul>
+
+            <!-- Secondary -->
+            <p class="secondary" style="font-size:14px;line-height:1.6;color:#2a2d33;margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+              Already have an account? <a href="{{sign_in_url}}" style="color:#0d0f12;text-decoration:underline;font-weight:500;">Sign in here</a> — and if you have questions before you start, our team is one reply away.
+            </p>
+
+          </td>
+        </tr>
+      </table>
+
+      <!-- Footer -->
+      <table role="presentation" width="560" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;width:100%;">
+        <tr>
+          <td class="footer" style="text-align:center;font-size:12px;line-height:1.6;color:#8a8f99;padding:24px 16px 0 16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,Helvetica,Arial,sans-serif;">
+            You're receiving this because you're enrolled in the DePaul business department.<br>
+            <a href="{{preferences_url}}" style="color:#8a8f99;text-decoration:underline;">Notification preferences</a>
+            &nbsp;·&nbsp;
+            <a href="{{help_url}}" style="color:#8a8f99;text-decoration:underline;">Help</a>
+            &nbsp;·&nbsp;
+            <a href="{{privacy_url}}" style="color:#8a8f99;text-decoration:underline;">Privacy</a>
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -123,7 +123,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
   {
     id: "1",
     name: "Maria Santos",
-    email: "msantos@depaul.edu",
+    email: "msantos@fsu.edu",
     avatarInitials: "MS",
     totalConversations: 23,
     totalMessages: 187,
@@ -134,7 +134,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
   {
     id: "2",
     name: "James Chen",
-    email: "jchen42@depaul.edu",
+    email: "jchen42@fsu.edu",
     avatarInitials: "JC",
     totalConversations: 19,
     totalMessages: 156,
@@ -145,7 +145,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
   {
     id: "3",
     name: "Aisha Johnson",
-    email: "ajohnson@depaul.edu",
+    email: "ajohnson@fsu.edu",
     avatarInitials: "AJ",
     totalConversations: 17,
     totalMessages: 134,
@@ -156,7 +156,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
   {
     id: "4",
     name: "Derek Williams",
-    email: "dwilliams@depaul.edu",
+    email: "dwilliams@fsu.edu",
     avatarInitials: "DW",
     totalConversations: 14,
     totalMessages: 98,
@@ -167,7 +167,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
   {
     id: "5",
     name: "Sofia Reyes",
-    email: "sreyes@depaul.edu",
+    email: "sreyes@fsu.edu",
     avatarInitials: "SR",
     totalConversations: 12,
     totalMessages: 89,
@@ -178,7 +178,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
   {
     id: "6",
     name: "Tyler Brooks",
-    email: "tbrooks@depaul.edu",
+    email: "tbrooks@fsu.edu",
     avatarInitials: "TB",
     totalConversations: 11,
     totalMessages: 76,
@@ -189,7 +189,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
   {
     id: "7",
     name: "Priya Patel",
-    email: "ppatel@depaul.edu",
+    email: "ppatel@fsu.edu",
     avatarInitials: "PP",
     totalConversations: 8,
     totalMessages: 52,
@@ -200,7 +200,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
   {
     id: "8",
     name: "Marcus Thompson",
-    email: "mthompson@depaul.edu",
+    email: "mthompson@fsu.edu",
     avatarInitials: "MT",
     totalConversations: 5,
     totalMessages: 31,
@@ -211,7 +211,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
   {
     id: "9",
     name: "Emma Liu",
-    email: "eliu@depaul.edu",
+    email: "eliu@fsu.edu",
     avatarInitials: "EL",
     totalConversations: 4,
     totalMessages: 24,
@@ -222,7 +222,7 @@ export const STUDENT_ACTIVITY: StudentActivity[] = [
   {
     id: "10",
     name: "Carlos Mendez",
-    email: "cmendez@depaul.edu",
+    email: "cmendez@fsu.edu",
     avatarInitials: "CM",
     totalConversations: 3,
     totalMessages: 18,
